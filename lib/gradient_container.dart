@@ -1,23 +1,24 @@
 import 'package:flutter/material.dart';
 
+import 'package:flutter_dice_roller_quiz_app/styled_text.dart';
+
 class GradientContainer extends StatelessWidget {
-  const GradientContainer({super.key});
+  const GradientContainer(this.color1, this.color2, {super.key});
+
+  final Color color1;
+  final Color color2;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                Color.fromARGB(255, 75, 233, 115),
-                Color.fromARGB(255, 129, 243, 211),
-              ],
-              begin:AlignmentGeometry.topLeft,
-              end: AlignmentGeometry.bottomRight
-            ),
-          ),
-          child: const Center(child: Text("Hello World")),
-        );
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [color1, color2],
+          begin: AlignmentGeometry.topLeft,
+          end: AlignmentGeometry.bottomRight,
+        ),
+      ),
+      child: const Center(child: StyledText("Hello World")),
+    );
   }
 }
-
