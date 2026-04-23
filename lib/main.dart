@@ -11,6 +11,8 @@ void main() {
                 Color.fromARGB(255, 75, 233, 115),
                 Color.fromARGB(255, 129, 243, 211),
               ],
+              begin:AlignmentGeometry.topLeft,
+              end: AlignmentGeometry.bottomRight
             ),
           ),
           child: const Center(child: Text("Hello World")),
